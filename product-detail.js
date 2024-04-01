@@ -30,6 +30,7 @@ const additional = document.getElementById('product-additional-img');
 const might_like_container = document.getElementById('you-might-like-container');
 const product_about = document.getElementById('abouts-description');
 const addToCartButtons = document.getElementById('add-to-cart');
+const successfullyAdded = document.getElementById('success');
 
 productsCollection.get().then((querySnapshot) => {
     let youMightLikeCounter = 0;
@@ -121,9 +122,11 @@ function redirectToProductDetails(productId) {
 }
 
 addToCartButtons.addEventListener("click", () => {
-    console.log("3");
-
     let cartItems = JSON.parse(localStorage.getItem("id") || '[]');
     cartItems.push(productId);
     localStorage.setItem("id", JSON.stringify(cartItems));
+    successfullyAdded.innerHTML = `<h1>Item successfully added</h1>`;
+    setTimeout(() => {
+        successfullyAdded.innerHTML = '';
+    }, 3000);
 });

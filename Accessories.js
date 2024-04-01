@@ -31,9 +31,6 @@ const firebaseConfig = {
     
       Object.keys(data).forEach((key) => {
         const productData = data[key];
-        console.log(doc.id)
-
-
         if (doc.id === 'bag') {
 
             const productElement = document.createElement('div');
