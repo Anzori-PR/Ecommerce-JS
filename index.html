@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Include Firebase SDK -->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script defer src="./app.js"></script>
+    <script defer src="./cart.js"></script>
+    <link rel="icon" type="image/png" href="../Images/nmt2ien6snbvvd91bedf19i52s.png">
+    <title>JS Ecommerce</title>
+</head>
+
+<body>
+    <section>
+        <header>
+            <content>
+                <logo>
+                    <a href="./index.html">SHOPPER</a>
+                </logo>
+
+                <nav>
+                    <a href="./index.html">Home</a>
+                    <a href="./Apparel.html">Apparel</a>
+                    <a href="./Accessories.html">Accessories</a>
+                </nav>
+
+                <span class="shopping">
+                    <p>Cart</p>
+                    <i class="shoppinng-cart fa-solid fa-cart-shopping">
+                        <span class="addToCart">0</span>
+                    </i>
+                </span>
+            </content>
+        </header>
+
+        <div class="pop-up">
+            <div class="shopping-cart-pop-up">
+                <span class="close-tag fa-solid fa-close"></span>
+                <div id="added-items">
+                    
+                </div>
+            </div>
+        </div>
+
+        <container>
+            <content>
+                <div id="products-container">
+
+                </div>
+            </content>
+        </container>
+
+        <footer class="footer-distributed">
+            <div class="footer-left">
+
+                <h3>SHOPPER</h3>
+
+                <p class="footer-links">
+                    <a href="./index.html">Home</a>
+                    ·
+                    <a href="./Apparel.html">Apparel</a>
+                    ·
+                    <a href="./Accessories.html">Accessories</a>
+                </p>
+
+                <p class="footer-company-name">SHOPPER © 2023</p>
+
+                <p class="footer-shipping-region">Shipping region: Georgia</p>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-right">
+
+                <p>Contact Us</p>
+
+                <form>
+
+                    <input type="text" name="email" placeholder="Email">
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <button>Send</button>
+                </form>
+
+            </div>
+        </footer>
+    </section>
+
+</body>
+
+</html>

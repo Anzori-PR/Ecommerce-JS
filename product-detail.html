@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script defer src="./product-detail.js"></script>
+    <script defer src="./cart.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <header>
+            <content>
+                <logo>
+                    <a href="./index.html">SHOPPER</a>
+                </logo>
+
+                <nav>
+                    <a href="./index.html">Home</a>
+                    <a href="./Apparel.html">Apparel</a>
+                    <a href="./Accessories.html">Accessories</a>
+                </nav>
+
+                <span class="shopping">
+                    <p>Cart</p>
+                    <i class="shoppinng-cart fa-solid fa-cart-shopping">
+                        <span class="addToCart">0</span>
+                    </i>
+                </span>
+            </content>
+        </header>
+
+        <div class="pop-up">
+            <div class="shopping-cart-pop-up">
+                <span class="close-tag fa-solid fa-close"></span>
+            </div>
+        </div>
+
+        <containers>
+            <contents>
+                <div id="product-details-container">
+                    <div class="main-additional-container">
+                        <!-- small additional img -->
+                        <div id="product-additional-img">
+                        
+                        </div>
+    
+                        <!-- Main img -->
+                        <div class="product-details-item details-square">
+                            <div class="product-thumb">
+                                <img class="product-img" src="../Images/no-image.jpg" id="product-image">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Description -->
+                    <div class="product-abouts-container">
+                        <div id="abouts-description">
+
+                        </div>
+                        <div class="products-size">
+                            <p>Size:</p>
+                            <table class="size-table">
+                                <tr>
+                                    <th>S</th>
+                                    <th>M</th>
+                                    <th>L</th>
+                                    <th>XL</th>
+                                    <th>2XL</th>
+                                    <th>3XL</th>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="add-cart-container">
+                            <button id="add-to-cart">Add to cart</button>
+
+                            <button class="return-policy" disabled="disabled">30 Day Free Return Policy <a class="Learn-more" href="#">Learn more</a></button>
+                        </div>
+                        
+                    </div>
+                </div>
+        
+                <h1 class="you-might">You might also like</h1>
+                <div id="you-might-like-container">
+
+                </div>
+            </contents> 
+        </containers>        
+
+        <footer class="footer-distributed">
+            <div class="footer-left">
+
+                <h3>SHOPPER</h3>
+
+                <p class="footer-links">
+                    <a href="./index.html">Home</a>
+                    ·
+                    <a href="./Apparel.html">Apparel</a>
+                    ·
+                    <a href="./Accessories.html">Accessories</a>
+                </p>
+
+                <p class="footer-company-name">SHOPPER © 2023</p>
+
+                <p class="footer-shipping-region">Shipping region: Georgia</p>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-right">
+
+                <p>Contact Us</p>
+
+                <form>
+
+                    <input type="text" name="email" placeholder="Email">
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <button>Send</button>
+                </form>
+
+            </div>
+        </footer>
+    </section>
+</body>
+</html>
