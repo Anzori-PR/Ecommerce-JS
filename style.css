@@ -53,9 +53,42 @@ header nav {
     width: 40%;
 }
 
+.burger-menu {
+    display: none;
+}
+
+.burger-menu img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.burger-menu-result {
+    left: 20px;
+    position: absolute;
+    width: auto;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.burger-menu-result a {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+}
+
 @media only screen and (max-width: 650px) {
     header nav {
         display: none;
+    }
+
+    .burger-menu {
+        display: block;
     }
 
     body {
@@ -116,18 +149,17 @@ header .shopping i {
 }
 
 .addToCart {
-    visibility: hidden;
     background-color: red;
     width: 15px;
     height: 18px;
     border-radius: 18px;
     color: white;
-    display: flex;
     top: 12px;
     position: absolute;
-
-    font-size: 17px;
+    display: flex;
+    font-size: 14px;
     justify-content: center;
+    align-items: center;
 }
 
 header logo {
@@ -846,7 +878,7 @@ containers contents {
 }
 
 .shopping-cart-pop-up.active {
-    width: 15%;
+    width: 150px;
     right: 0;
 }
 
@@ -900,10 +932,13 @@ containers contents {
 
 .delete-btn {
     border: none;
-    padding: 5px 10px;
-    border-radius: 10px;
-    background-color: red;
-    color: white;
+    background-color: transparent;
+}
+
+.delete-btn img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 .added-price {

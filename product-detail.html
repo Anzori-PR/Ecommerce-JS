@@ -7,8 +7,8 @@
     <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script defer src="./product-detail.js"></script>
-    <script defer src="./cart.js"></script>
+    <script defer src="./product-detail.js" type="module"></script>
+    <script defer src="./cart.js" type="module"></script>
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
@@ -16,6 +16,16 @@
     <section>
         <header>
             <content>
+                <span class="burger-menu">
+                    <img id="burger" src="./Images/burger-menu.png" alt="">
+
+                    <div class="burger-menu-result">
+                        <a href="./index.html">Home</a>
+                        <a href="./Apparel.html">Apparel</a>
+                        <a href="./Accessories.html">Accessories</a>
+                    </div>
+                </span>
+
                 <logo>
                     <a href="./index.html">SHOPPER</a>
                 </logo>
@@ -28,7 +38,7 @@
 
                 <span class="shopping">
                     <p>Cart</p>
-                    <i class="shoppinng-cart fa-solid fa-cart-shopping">
+                    <i class="shopping-cart fa-solid fa-cart-shopping">
                         <span class="addToCart">0</span>
                     </i>
                 </span>

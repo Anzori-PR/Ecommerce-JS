@@ -1,50 +1,29 @@
-const firebaseConfig = {
+import { firestore } from "./firestore.js";
+const productsCollection = firestore.collection("products");
 
-    apiKey: "AIzaSyAIr5oOxsmrRY1ckvVjzI5lKfaKGZL0Nyo",
-  
-    authDomain: "first-project-51a51.firebaseapp.com",
-  
-    projectId: "first-project-51a51",
-  
-    storageBucket: "first-project-51a51.appspot.com",
-  
-    messagingSenderId: "933776983263",
-  
-    appId: "1:933776983263:web:e0087bbc897bd349fb556a",
-  
-    measurementId: "G-WZ9P90S5JW"
-  
-  };
-  
-  firebase.initializeApp(firebaseConfig);
-  
-  const firestore = firebase.firestore();
-  
-  const productsCollection = firestore.collection("products");
-  
-  productsCollection.get().then((querySnapshot) => {
-    const productsContainer = document.getElementById('products-container');
-  
-    querySnapshot.forEach((doc) => {
-      const data = doc.data();
-      
-    
-      Object.keys(data).forEach((key) => {
-        const productData = data[key];
-    
-        // Create a new element for each product
-        const productElement = document.createElement('div');
-        productElement.classList.add('product-item');
-        productElement.classList.add('square');
-        productElement.setAttribute('data-id', productData.Id);
-    
-        productElement.innerHTML = `
-        <div onclick="redirectToProductDetails(this)">
+productsCollection.get().then((querySnapshot) => {
+  const productsContainer = document.getElementById('products-container');
+
+  querySnapshot.forEach((doc) => {
+    const data = doc.data();
+
+
+    Object.keys(data).forEach((key) => {
+      const productData = data[key];
+
+      // Create a new element for each product
+      const productElement = document.createElement('div');
+      productElement.classList.add('product-item');
+      productElement.classList.add('square');
+      productElement.setAttribute('data-id', productData.Id);
+
+      productElement.innerHTML = `
+        <div class="redirectToProductDetails">
           <div class="product-thumb">
           ${productData.imageUrl == null
-            ? `<img class="product-img" src="./images/placeholder.jpg" alt="">`
-            : `<img class="product-img" src="${productData.imageUrl}" alt="${productData.name}">`
-          }
+          ? `<img class="product-img" src="./images/placeholder.jpg" alt="">`
+          : `<img class="product-img" src="${productData.imageUrl}" alt="${productData.name}">`
+        }
           </div>
           <div class="product-about">
               <div class="product-descr">
@@ -55,26 +34,28 @@ const firebaseConfig = {
           </div>
           </div>
         `;
-  
-        productsContainer.appendChild(productElement);
-      });
+
+      productsContainer.appendChild(productElement);
+      const redirectToProductDetails = productElement.querySelector('.redirectToProductDetails');
+      redirectToProductDetails.addEventListener('click', () => {
+        product_details(productData.Id);
+      })
     });
   });
-    
-  function redirectToProductDetails(element) {
-    const productId = element.closest('.product-item').getAttribute('data-id');
-    window.location.href = `product-detail.html?id=${productId}`;
-  }
-  
-  const ActivePage = window.location.pathname;
-  const NavLinks = document.querySelectorAll('nav a').
+});
+
+function product_details(id) {
+  window.location.href = `product-detail.html?id=${id}`;
+}
+
+const ActivePage = window.location.pathname;
+const NavLinks = document.querySelectorAll('nav a').
   forEach(link => {
-    if(link.href.includes(`${ActivePage}`)){
+    if (link.href.includes(`${ActivePage}`)) {
       link.classList.add('active');
     }
   })
-  
-  
-  
-  
-  
+
+
+
+

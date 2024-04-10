@@ -1,24 +1,5 @@
-const firebaseConfig = {
-
-    apiKey: "AIzaSyAIr5oOxsmrRY1ckvVjzI5lKfaKGZL0Nyo",
-
-    authDomain: "first-project-51a51.firebaseapp.com",
-
-    projectId: "first-project-51a51",
-
-    storageBucket: "first-project-51a51.appspot.com",
-
-    messagingSenderId: "933776983263",
-
-    appId: "1:933776983263:web:e0087bbc897bd349fb556a",
-
-    measurementId: "G-WZ9P90S5JW"
-
-};
-
-firebase.initializeApp(firebaseConfig);
-
-const firestore = firebase.firestore();
+import { firestore } from "./firestore.js";
+import { showItems } from "./cart.js";
 
 const productsCollection = firestore.collection("products");
 
@@ -89,7 +70,7 @@ productsCollection.get().then((querySnapshot) => {
             productElement.classList.add('you-might-square');
 
             productElement.innerHTML = `
-                <div onclick="redirectToProductDetails(this)">
+                <div>
                     <div class="product-thumb">
                     <img class="product-img" src="${Data.imageUrl || '../Images/no-image.jpg'}" alt="${Data.name}">
                     </div>
@@ -112,7 +93,6 @@ productsCollection.get().then((querySnapshot) => {
             } else {
                 return;
             }
-
         });
     });
 });
@@ -129,4 +109,5 @@ addToCartButtons.addEventListener("click", () => {
     setTimeout(() => {
         successfullyAdded.innerHTML = '';
     }, 3000);
+    showItems();
 });
