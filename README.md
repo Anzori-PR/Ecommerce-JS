@@ -2,9 +2,6 @@
 
 Welcome to my E-commerce Website project repository! This project aims to create a simple e-commerce website using HTML, CSS, and JavaScript. The focus of this project is to gain more knowledge in working with vanilla JavaScript while implementing an e-commerce design.
 
-# About the Project
-
-This project is a work-in-progress and is not yet completed. Throughout the development process, I've been continuously learning and improving my skills in HTML, CSS, and JavaScript. The primary goal is to build a functional e-commerce website with a clean and user-friendly design.
 
 # Technologies Used
 
