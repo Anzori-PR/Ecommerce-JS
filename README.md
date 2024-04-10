@@ -32,4 +32,4 @@ For any inquiries or feedback regarding the project, you can reach me via email 
 
 Thank you for your interest in my E-commerce Website project!
 
-# Live Demo: https://anzori-pr.github.io/Ecommerce-Web/index.html
+# Live Demo: [https://anzori-pr.github.io/Ecommerce-Web/index.html](https://anzori-pr.github.io/Ecommerce-JS/index.html)
